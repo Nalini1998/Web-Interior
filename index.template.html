@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Interior Design Template</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Furniture Service</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+<style>
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:30;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+  
+  /* Searching Bar */
+  input[type=text] {
+    width: 200px;
+    box-sizing: border-box;
+    border: 1px solid rgb(222, 237, 242);
+    border-radius: 5px;
+    font-size: 12px;
+    background-color: rgba(2, 9, 255, 0.1);
+    background-image: url('searchicon.png');
+    background-position: 30px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 12px 12px 20px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    margin-top: 20px;
+  }
+
+  input[type=text]:focus {
+    width: 100%;
+    border: 1px solid rgb(222, 237, 242);
+  }
+  
+  /*  Scroll back to top */
+  #backButton {
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 10px;
+    z-index: 99;
+    font-size: 10px;
+    border: none;
+    outline: none;
+    background-color: #B0C4DE;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 4px;
+  }
+
+  #backButton:hover {
+    background-color: #555;
+  }
+  
+</style>
+</head>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-blue-grey w3-collapse w3-top w3-large" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft w3-blue-grey" style="width:100%;font-size:20px">close</a>
+  <div class="w3-container">
+    <img src="https://assets.codepen.io/10602517/IMG_profile_2.jpg" style="width:80%;" class="w3-round-xlarge w3-center w3-margin-top"><br>
+    <h2 class="w3-padding-16 font-effect-shadow-multiple"><b>Nalini Vo</b></h2>
+  </div>
+  <div class="w3-bar-block w3-margin-top w3-padding-16">
+    <a href="index.html" onclick="w3_close()" class="glyphicon glyphicon-home w3-bar-item w3-button w3-hover-white w3-padding" style="font-size:20px;color:rgb(255, 255, 255)">  Home</a> 
+    <a href="#showcase" onclick="w3_close()" class="glyphicon glyphicon-fire w3-bar-item w3-button w3-hover-white w3-padding" style="font-size:20px;color:rgb(255, 229, 133)">  Showcase</a> 
+    <a href="#services" onclick="w3_close()" class="glyphicon glyphicon-calendar w3-bar-item w3-button w3-hover-white w3-padding" style="font-size:20px;color:rgb(151, 231, 199)">  Services</a> 
+    <a href="#designers" onclick="w3_close()" class="glyphicon glyphicon-flash w3-bar-item w3-button w3-hover-white w3-padding" style="font-size:20px;color:#f5ff30">  Designers</a> 
+    <a href="#packages" onclick="w3_close()" class="glyphicon glyphicon-shopping-cart w3-bar-item w3-button w3-hover-white w3-padding" style="font-size:20px;color:rgb(255, 146, 146)">  Packages</a> 
+    <a href="#contact" onclick="w3_close()" class="	glyphicon glyphicon-phone w3-bar-item w3-button w3-hover-white w3-padding" style="font-size:20px;color:rgb(75, 255, 192)">  Contact</a>
+  </div>
+  
+    <div class="w3-panel w3-large w3-margin-top w3-padding-large">
+      <i class="fa fa-github w3-blue-grey w3-hover-opacity w3-animate-zoom"></i>
+      <i class="fa fa-linkedin w3-blue-grey w3-hover-opacity w3-animate-zoom"></i>
+      <i class="fa fa-facebook-official w3-blue-grey w3-hover-opacity w3-animate-zoom"></i>
+      <i class="fa fa-instagram w3-blue-grey w3-hover-opacity w3-animate-zoom"></i>
+      <i class="fa fa-pinterest-p w3-blue-grey w3-hover-opacity w3-animate-zoom"></i>
+      <i class="fa fa-twitter w3-blue-grey w3-hover-opacity w3-animate-zoom"></i>
+    </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-blue-grey w3-xlarge">
+  <a href="javascript:void(0)" class="w3-button w3-blue-grey w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Nalini Vo Enterprise.</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:330px;margin-right:40px margin-top:50px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:40px" id="showcase">
+       <input class="w3-container w3-right " type="text" name="search" placeholder="Search..." id="input">
+    <h2 class="w3-jumbo font-effect-shadow-multiple w3-margin"><b>Interior Design</b></h2>
+    <h3 class="w3-xxxlarge w3-text-rgb(7, 18, 45) font-effect-shadow-multiple w3-margin"><b>Showcase.</b></h3>
+
+    <hr style="width:50px;border:5px solid rgb(7, 18, 45)" class="w3-round">
+  </div>
+
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+    <div class="w3-half margin-top:50px">
+      <img src="https://i.pinimg.com/1200x/2d/c5/c8/2dc5c813ac53099b5d89b8711ec65b11.jpg" style="width:100%" onclick="onClick(this)" alt="Concrete meets bricks" class="w3-hover-opacity">
+      <img src="https://www.bhg.com/thmb/CnzAlNTp2R2cOKuZB4VcATFZUug=/1962x0/filters:no_upscale():strip_icc()/minimailst-white-kitchen-dining-butcher-block-1lP8r3R04eV9UV67DltzUw-a208f22d5b004197b619e9a81b65bf33.jpg" style="width:100%" onclick="onClick(this)" alt="Light, white and tight scandinavian design">
+      <img src="https://www.thespruce.com/thmb/LbvaCj1uerYk78-tygbX-RFsBlc=/4256x0/filters:no_upscale():max_bytes(150000):strip_icc()/HoneycombHomeDesign-bfaca14402e74254b7335e42c5ee2139.jpg" style="width:100%" onclick="onClick(this)" alt="White walls with designer chairs">
+    </div>
+
+    <div class="w3-half">
+      <img src="https://www.atrium.com/wp-content/uploads/2018/08/gallery-img-casement-5lite.jpg" style="width:100%" onclick="onClick(this)" alt="Windows for the atrium">
+      <img src="https://www.ikea.com/images/a-large-white-bedroom-with-a-home-office-space-set-in-front--b4ec73464484842d56e03e3e8e0111f9.jpg?f=s" style="width:100%" onclick="onClick(this)" alt="Bedroom and office in one space">
+      <img src="https://www.thespruce.com/thmb/jREgGVKpVvAwhHzTTu1_FDJCjlI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/what-is-scandinavian-design-4149404_hero_3244-115e287ad30444bdbadb32bddde060f6.jpg" style="width:100%" onclick="onClick(this)" alt="Scandinavian design">
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-blue-grey" style="padding-top:10" onclick="this.style.display='none'">
+    <span class="w3-button w3-blue-grey w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+            
+  <!-- Services -->
+  <div class="w3-container" id="services" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-rgb(7, 18, 45)" font-effect-shadow-multiple><b>Services.</b></h1>
+    <hr style="width:50px;border:5px solid rgb(7, 18, 45)" class="w3-round">
+    <p>Meow.Nalini Furniture Enterprise is a premier Small Business Office Furniture and Interior Design Service that focus on what's best for your home, what's best for you as well as a solutions provider for commercial and government customers nationwide.</p>
+    <p>Find your required pieces from our range of furniture. Our extensive collection of sofas includes sofa beds, corner sofas, armchairs and accent chairs, suitable for bedrooms, living rooms and any other area of your home where you would like to add comfortable seating.
+    </p>
+    <p>Whether you’re furnishing one or multiple apartments, a classroom, or setting up a new workplace, our Partners will help you deliver quality environments with creativity and expertise.</p>
+  </div>
+  
+  <!-- Designers -->
+  <div class="w3-container" id="designers" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-rgb(7, 18, 45)" font-effect-shadow-multiple><b>Designers.</b></h1>
+    <hr style="width:50px;border:5px solid rgb(7, 18, 45)" class="w3-round">
+    <p>One of best designers in Vietnam.</p>
+    <p>Find the perfect bed, be it a double, king sized, single or children's bed, alongside an assortment of mattresses to ensure the perfect night sleep. Update your dining table and chairs or add a statement look to your room with a coffee table - they come in all shapes and sizes - whilst we also provide a plethora of options to aid working from home such as desks, office chairs and other home office furniture. You can also find ceiling lighting, table lamps and wall lights within this home furniture range to give your room a completed look.
+    </p>
+    <p><b>Our designers are thoughtfully chosen</b>:</p>
+  </div>
+
+  <!-- The Team -->
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="https://assets.codepen.io/10602517/IMG_profile_4.jpg" alt="Nalini Vo" style="width:100%">
+        <div class="w3-container">
+          <h3>Nalini Vo</h3>
+          <p class="w3-opacity">CEO & Founder</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="https://assets.codepen.io/10602517/IMG_profile_5.jpg" alt="Meow Meow" style="width:100%">
+        <div class="w3-container">
+          <h3>Nalini Vo</h3>
+          <p class="w3-opacity">Designer</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="https://assets.codepen.io/10602517/IMG_profile_3.jpg" alt="Ducky Ducky" style="width:100%">
+        <div class="w3-container">
+          <h3>Nalini Vo</h3>
+          <p class="w3-opacity">Architect</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Packages / Pricing Tables -->
+    <!-- Packages / Pricing Tables -->
+    <div class="w3-container" id="packages" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-blue-grey font-effect-shadow-multiple"><b>Packages.</b></h1>
+      <hr style="width:50px;border:5px solid rgb(7, 18, 45)" class="w3-round">
+      <p>The most meaningful gifts are often the most personal. With John Lewis & Partners Business, every colleague and client on your list can get exactly what they want.</p>
+      <p>Whether you’re starting-up, scaling-up, or educating the next generation of leaders, the right technology can make all the difference.  We’ll help you find a solution that’s right for your needs and budget.</p>
+    </div>
+  
+    <div class="w3-row-padding w3-animate-opacity">
+      <div class="w3-half w3-margin-bottom w3-opacity-min w3-hover-opacity-off">
+        <ul class="w3-ul w3-light-grey w3-center">
+          <li class="w3-dark-grey w3-xlarge w3-padding-32">BASIC</li>
+          <li class="w3-padding-16">Floorplanning</li>
+          <li class="w3-padding-16">10 hours support</li>
+          <li class="w3-padding-16">Photography</li>
+          <li class="w3-padding-16">10% furniture discount</li>
+          <li class="w3-padding-16">Good deals</li>
+          <li class="w3-padding-16">
+            <h2>$ 199</h2>
+            <span class="w3-opacity">per room</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-blue-grey w3-padding-large w3-hover-blue-grey">Sign Up</button>
+          </li>
+        </ul>
+      </div>
+          
+      <div class="w3-half w3-opacity-min w3-hover-opacity-off">
+        <ul class="w3-ul w3-light-grey w3-center">
+          <li class="w3-blue-grey w3-xlarge w3-padding-32">PRO</li>
+          <li class="w3-padding-16">Floorplanning</li>
+          <li class="w3-padding-16">50 hours support</li>
+          <li class="w3-padding-16">Photography</li>
+          <li class="w3-padding-16">20% furniture discount</li>
+          <li class="w3-padding-16">GREAT deals</li>
+          <li class="w3-padding-16">
+            <h2>$ 249</h2>
+            <span class="w3-opacity">per room</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-grey w3-padding-large w3-hover-blue-grey">Sign Up</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  
+  
+  <!-- Contact -->
+  <div class="w3-container" id="contact" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-rgb(7, 18, 45) font-effect-shadow-multiple"><b>Contact.</b></h1>
+    <hr style="width:50px;border:5px solid rgb(7, 18, 45)" class="w3-round">
+    <p>We’ll put you in touch with the right team to help. We love meeting new people!</p>
+    <form action="/action_page.php" target="_blank">
+      <div class="w3-section">
+        <label>Your Name</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div>
+      <div class="w3-section w3-round">
+        <label>Your Email</label>
+        <input class="w3-input w3-border" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">
+        <label>Your Message</label>
+        <input class="w3-input w3-border" type="text" name="Message" required>
+      </div>
+      <button type="submit" class="w3-button w3-block w3-padding-large w3-blue-grey w3-margin-bottom w3-round"><i class="fa fa-envelope fa-fw" style="font-size:20px;color:rgb(254, 254, 254)"></i>  Send Message </button>
+    </form>  
+  </div>
+  
+
+<!-- End page content -->
+</div>
+
+<!-- Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://github.com/Nalini1998" title="Meow.Nalini98" target="_blank" class="w3-hover-opacity">@Meow.Nalini1998</a></p></div>
+
+    </div>
+<button onclick="topFunction()" id="backButton" title="Go to top">Top</button>
+    </div>                                                <script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("myOverlay").style.display = "block";
+    }
+
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("myOverlay").style.display = "none";
+    }
+    // Details information of About me
+    function myFunction(id) {
+      var x = document.getElementById(id);
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+    // Chat Popup 
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+    
+    // Get the back to top button
+    let myButton = document.getElementById('backButton')
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        myButton.style.display = 'block';
+    } else {
+        myButton.style.display = 'none';
+    }
+   }
+   
+   function topFunction() {
+     document.body.scrollTop = 0;
+     document.documentElement.scrollTop = 0;
+   }
+                                                     
+</script>
+
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
